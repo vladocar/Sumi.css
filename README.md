@@ -12,7 +12,7 @@ A minimalist, classless-first CSS framework. Write plain, semantic HTML and it l
 - **Accessible.** Visible focus rings, ARIA-driven states (`aria-invalid`, `aria-busy`, `aria-current`) and support for reduced motion.
 
 
-**[Components](docs.html)** · **[Tutorial](tutorial.html)** · **[Cheat sheet](tutorial.html#cheatsheet)**
+**[Components](docs.html)** · **[Tutorial](tutorial.html)** · **[Cheat sheet](tutorial.html#cheatsheet)** **[Blog Post](https://www.designinspiration.info/sumi-css-tutorial-build-a-clean-website-with-plain-html/)**
 
 ---
 
