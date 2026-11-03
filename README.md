@@ -75,7 +75,7 @@ Use `sumi.css` (unminified) while you develop. Its comments explain every sectio
       <h1>Hello, ink.</h1>
     </hgroup>
     <p class="lead">This page is styled by Sumi with almost no classes.</p>
-    <a href="#start" role="button">Get started</a>
+    <a href="#start" data-style="button">Get started</a>
   </main>
 
   <footer>
@@ -93,7 +93,7 @@ Use `sumi.css` (unminified) while you develop. Its comments explain every sectio
 | --- | --- |
 | `h1`–`h6`, `p`, lists, `blockquote`, `code`, `kbd`, `pre`, `mark` | Fluid type scale and consistent vertical spacing |
 | `<nav>` with two `<ul>` | Navigation bar, left and right groups. Vertical inside `<aside>` |
-| `<button>`, `[type=submit]`, `<a role="button">` | Buttons |
+| `<button>`, `[type=submit]`, `<a data-style="button">` | Buttons |
 | `<input>`, `<select>`, `<textarea>`, `<label>`, `<fieldset>` | Full-width fields with focus rings and helper text |
 | `type="checkbox"`, `type="radio"`, `type="range"`, `type="file"`, `type="color"` | Custom controls that match the theme |
 | `<table>` | Clean rules and tabular numbers |
@@ -117,8 +117,8 @@ Everything Sumi responds to beyond plain HTML:
 | `.prose` `.serif` | text wrapper | Long-form reading column, serif typeface |
 | `.secondary` `.contrast` `.outline` | button | Button colors and outline style |
 | `.small` `.large` `.full` | button | Sizes, full width |
-| `role="button"` | `<a>` | Link styled as a button |
-| `role="group"` | wrapper | Joins buttons, or an input and a button |
+| `data-style="button"` | `<a>` | Link styled as a button |
+| `data-style="group"` | wrapper | Joins buttons, or an input and a button |
 | `role="switch"` | checkbox | Toggle switch |
 | `aria-invalid="true"` / `"false"` | field | Red or green validation state |
 | `aria-busy="true"` | any element | Loading spinner |
@@ -151,7 +151,7 @@ Everything Sumi responds to beyond plain HTML:
 <article>
   <header><strong>Six-week course</strong></header>
   <p>From first strokes to a finished hanging scroll.</p>
-  <footer><a href="#book" role="button" class="full">€180</a></footer>
+  <footer><a href="#book" data-style="button" class="full">€180</a></footer>
 </article>
 
 <!-- Dropdown -->

@@ -140,7 +140,7 @@ body > header { border-bottom: 1px solid var(--s-border); }
       <li><a href="#top" aria-current="page">Tutorial</a></li>
       <li><a href="#cheatsheet">Cheat sheet</a></li>
       <li>
-        <div role="group" aria-label="Color theme" class="theme-switch">
+        <div data-style="group" aria-label="Color theme" class="theme-switch">
           <button type="button" class="secondary outline small" data-theme-set="auto" aria-pressed="true">Auto</button>
           <button type="button" class="secondary outline small" data-theme-set="light" aria-pressed="false">Light</button>
           <button type="button" class="secondary outline small" data-theme-set="dark" aria-pressed="false">Dark</button>
@@ -255,11 +255,11 @@ body > header { border-bottom: 1px solid var(--s-border); }
               <li><a href="#navigation" aria-current="page">Courses</a></li>
               <li><a href="#navigation">Teachers</a></li>
               <li><a href="#navigation">Visit</a></li>
-              <li><a href="#forms" role="button" class="small">Book a seat</a></li>
+              <li><a href="#forms" data-style="button" class="small">Book a seat</a></li>
             </ul>
           </nav>
         </div>
-        <p>A link with <code>role="button"</code> looks like a button but still navigates. Use it for calls to action that go to another page or section.</p>
+        <p>A link with <code>data-style="button"</code> looks like a button but still navigates. Use it for calls to action that go to another page or section.</p>
         <p>For a breadcrumb trail, label the nav <code>breadcrumb</code>. Sumi adds the separators.</p>
         <div class="example">
           <nav aria-label="breadcrumb">
@@ -289,8 +289,8 @@ body > header { border-bottom: 1px solid var(--s-border); }
           </hgroup>
           <p class="lead">Small evening classes for complete beginners. Ink, brushes and paper are provided.</p>
           <div class="row">
-            <a href="#cards" role="button">See courses</a>
-            <a href="#interactive" role="button" class="secondary outline">Read the FAQ</a>
+            <a href="#cards" data-style="button">See courses</a>
+            <a href="#interactive" data-style="button" class="secondary outline">Read the FAQ</a>
           </div>
         </div>
 
@@ -340,17 +340,17 @@ body > header { border-bottom: 1px solid var(--s-border); }
             <article>
               <header><strong>Taster evening</strong></header>
               <p>One two-hour session. Try the brush, the ink and the basic strokes.</p>
-              <footer><a href="#forms" role="button" class="secondary outline full">€35</a></footer>
+              <footer><a href="#forms" data-style="button" class="secondary outline full">€35</a></footer>
             </article>
             <article>
               <header><strong>Six-week course</strong></header>
               <p>Weekly classes from first strokes to a finished hanging scroll.</p>
-              <footer><a href="#forms" role="button" class="full">€180</a></footer>
+              <footer><a href="#forms" data-style="button" class="full">€180</a></footer>
             </article>
             <article>
               <header><strong>Private lesson</strong></header>
               <p>One hour with a teacher, at a time that suits you.</p>
-              <footer><a href="#forms" role="button" class="secondary outline full">€60</a></footer>
+              <footer><a href="#forms" data-style="button" class="secondary outline full">€60</a></footer>
             </article>
           </div>
         </div>
@@ -404,10 +404,10 @@ form.addEventListener('submit', (event) => {
         <p>Two more patterns are worth knowing:</p>
         <ul>
           <li><code>&lt;input type="checkbox" role="switch"&gt;</code> draws a toggle switch instead of a checkbox.</li>
-          <li><code>&lt;div role="group"&gt;</code> joins an input and a button into one control, like a search bar.</li>
+          <li><code>&lt;div data-style="group"&gt;</code> joins an input and a button into one control, like a search bar.</li>
         </ul>
         <div class="example">
-          <div role="group">
+          <div data-style="group">
             <input type="search" name="q" placeholder="Search courses" aria-label="Search courses">
             <button type="button">Search</button>
           </div>
@@ -585,7 +585,7 @@ blockquote {
                 <ul>
                   <li><a href="#finished" aria-current="page">Courses</a></li>
                   <li><a href="#finished">FAQ</a></li>
-                  <li><a href="#finished" role="button" class="small">Book a seat</a></li>
+                  <li><a href="#finished" data-style="button" class="small">Book a seat</a></li>
                 </ul>
               </nav>
             </header>
@@ -599,17 +599,17 @@ blockquote {
                 <article>
                   <header><strong>Taster evening</strong></header>
                   <p>One two-hour session to try the basic strokes.</p>
-                  <footer><a href="#finished" role="button" class="secondary outline full">€35</a></footer>
+                  <footer><a href="#finished" data-style="button" class="secondary outline full">€35</a></footer>
                 </article>
                 <article>
                   <header><strong>Six-week course</strong></header>
                   <p>From first strokes to a finished hanging scroll.</p>
-                  <footer><a href="#finished" role="button" class="full">€180</a></footer>
+                  <footer><a href="#finished" data-style="button" class="full">€180</a></footer>
                 </article>
                 <article>
                   <header><strong>Private lesson</strong></header>
                   <p>One hour with a teacher, when it suits you.</p>
-                  <footer><a href="#finished" role="button" class="secondary outline full">€60</a></footer>
+                  <footer><a href="#finished" data-style="button" class="secondary outline full">€60</a></footer>
                 </article>
               </div>
               <h3>Questions</h3>
@@ -642,7 +642,7 @@ blockquote {
       <ul>
         <li><a href="#courses" aria-current="page">Courses</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="#book" role="button" class="small">Book a seat</a></li>
+        <li><a href="#book" data-style="button" class="small">Book a seat</a></li>
       </ul>
     </nav>
   </header>
@@ -659,17 +659,17 @@ blockquote {
       <article>
         <header><strong>Taster evening</strong></header>
         <p>One two-hour session to try the basic strokes.</p>
-        <footer><a href="#book" role="button" class="secondary outline full">€35</a></footer>
+        <footer><a href="#book" data-style="button" class="secondary outline full">€35</a></footer>
       </article>
       <article>
         <header><strong>Six-week course</strong></header>
         <p>From first strokes to a finished hanging scroll.</p>
-        <footer><a href="#book" role="button" class="full">€180</a></footer>
+        <footer><a href="#book" data-style="button" class="full">€180</a></footer>
       </article>
       <article>
         <header><strong>Private lesson</strong></header>
         <p>One hour with a teacher, when it suits you.</p>
-        <footer><a href="#book" role="button" class="secondary outline full">€60</a></footer>
+        <footer><a href="#book" data-style="button" class="secondary outline full">€60</a></footer>
       </article>
     </section>
 
@@ -745,8 +745,8 @@ blockquote {
               <tr><td><code>.prose</code> <code>.serif</code></td><td>text wrapper</td><td>Long-form reading column, serif typeface</td></tr>
               <tr><td><code>.secondary</code> <code>.contrast</code> <code>.outline</code></td><td>button</td><td>Button colors and outline style</td></tr>
               <tr><td><code>.small</code> <code>.large</code> <code>.full</code></td><td>button</td><td>Button sizes, full width</td></tr>
-              <tr><td><code>role="button"</code></td><td><code>&lt;a&gt;</code></td><td>Link that looks like a button</td></tr>
-              <tr><td><code>role="group"</code></td><td>wrapper</td><td>Joins buttons or input + button</td></tr>
+              <tr><td><code>data-style="button"</code></td><td><code>&lt;a&gt;</code></td><td>Link that looks like a button</td></tr>
+              <tr><td><code>data-style="group"</code></td><td>wrapper</td><td>Joins buttons or input + button</td></tr>
               <tr><td><code>role="switch"</code></td><td>checkbox</td><td>Toggle switch</td></tr>
               <tr><td><code>aria-invalid</code></td><td>field</td><td>Red when <code>true</code>, green when <code>false</code></td></tr>
               <tr><td><code>aria-busy="true"</code></td><td>any element</td><td>Loading spinner</td></tr>
