@@ -354,7 +354,7 @@ table.striped tbody tr:nth-child(odd) { background: var(--s-surface); }
    Variants: .secondary .contrast .outline   Sizes: .small .large
    ========================================================================== */
 
-:where(button, [type="button"], [type="submit"], [type="reset"], [role="button"]) {
+:where(button, [type="button"], [type="submit"], [type="reset"], [data-style="button"]) {
   --s-btn: var(--s-primary);
   --s-btn-on: var(--s-on-primary);
   --s-btn-hover: color-mix(in srgb, var(--s-btn) 85%, var(--s-mix));
@@ -378,41 +378,41 @@ table.striped tbody tr:nth-child(odd) { background: var(--s-surface); }
   appearance: none;
   transition: background-color var(--s-transition), border-color var(--s-transition), color var(--s-transition), box-shadow var(--s-transition);
 }
-:where(button, [type="button"], [type="submit"], [type="reset"], [role="button"]):hover {
+:where(button, [type="button"], [type="submit"], [type="reset"], [data-style="button"]):hover {
   background: var(--s-btn-hover);
   border-color: var(--s-btn-hover);
 }
-:where(button, [type="button"], [type="submit"], [type="reset"], [role="button"]):active { transform: translateY(1px); }
+:where(button, [type="button"], [type="submit"], [type="reset"], [data-style="button"]):active { transform: translateY(1px); }
 
 .secondary { --s-btn: var(--s-secondary); --s-btn-on: var(--s-on-secondary); }
 .contrast { --s-btn: var(--s-contrast); --s-btn-on: var(--s-on-contrast); --s-btn-hover: color-mix(in srgb, var(--s-contrast) 82%, var(--s-bg)); }
-:is(button, [type="button"], [type="submit"], [type="reset"], [role="button"]).outline {
+:is(button, [type="button"], [type="submit"], [type="reset"], [data-style="button"]).outline {
   color: var(--s-btn);
   background: transparent;
   border-color: color-mix(in srgb, var(--s-btn) 55%, transparent);
 }
-:is(button, [type="button"], [type="submit"], [type="reset"], [role="button"]).outline:hover {
+:is(button, [type="button"], [type="submit"], [type="reset"], [data-style="button"]).outline:hover {
   background: color-mix(in srgb, var(--s-btn) 10%, transparent);
   border-color: var(--s-btn);
 }
-:is(button, [role="button"]).small { padding: .4rem .8rem; font-size: .875rem; }
-:is(button, [role="button"]).large { padding: .8rem 1.5rem; font-size: 1.1rem; }
+:is(button, [data-style="button"]).small { padding: .4rem .8rem; font-size: .875rem; }
+:is(button, [data-style="button"]).large { padding: .8rem 1.5rem; font-size: 1.1rem; }
 
-:where(button, [type="button"], [type="submit"], [type="reset"], [role="button"]):is(:disabled, [aria-disabled="true"]) {
+:where(button, [type="button"], [type="submit"], [type="reset"], [data-style="button"]):is(:disabled, [aria-disabled="true"]) {
   opacity: .5;
   cursor: not-allowed;
   pointer-events: none;
 }
 
 /* Button / input group */
-[role="group"] { display: inline-flex; vertical-align: middle; margin-bottom: var(--s-space); }
-[role="group"] > * { margin: 0 !important; border-radius: 0; }
-[role="group"] > * + * { margin-left: -1px !important; }
-[role="group"] > :first-child { border-radius: var(--s-radius) 0 0 var(--s-radius); }
-[role="group"] > :last-child { border-radius: 0 var(--s-radius) var(--s-radius) 0; }
-[role="group"] > :focus-visible { position: relative; z-index: 1; }
-[role="group"]:has(input, select) { display: flex; }
-[role="group"] > :is(input, select) { flex: 1; min-width: 0; }
+[data-style="group"] { display: inline-flex; vertical-align: middle; margin-bottom: var(--s-space); }
+[data-style="group"] > * { margin: 0 !important; border-radius: 0; }
+[data-style="group"] > * + * { margin-left: -1px !important; }
+[data-style="group"] > :first-child { border-radius: var(--s-radius) 0 0 var(--s-radius); }
+[data-style="group"] > :last-child { border-radius: 0 var(--s-radius) var(--s-radius) 0; }
+[data-style="group"] > :focus-visible { position: relative; z-index: 1; }
+[data-style="group"]:has(input, select) { display: flex; }
+[data-style="group"] > :is(input, select) { flex: 1; min-width: 0; }
 
 /* ==========================================================================
    7. Forms
@@ -529,8 +529,8 @@ table.striped tbody tr:nth-child(odd) { background: var(--s-surface); }
 :where([type="checkbox"], [type="radio"]):disabled { opacity: .5; cursor: not-allowed; }
 :where([type="checkbox"], [type="radio"])[aria-invalid="true"] { border-color: var(--s-danger); }
 
-/* switch: <input type="checkbox" role="switch"> */
-[type="checkbox"][role="switch"] {
+/* switch: <input type="checkbox" data-style="switch"> */
+[type="checkbox"][data-style="switch"] {
   width: 2.25rem;
   height: 1.3rem;
   padding: 0 .15rem;
@@ -539,7 +539,7 @@ table.striped tbody tr:nth-child(odd) { background: var(--s-surface); }
   border-radius: 999px;
   background: var(--s-border-strong);
 }
-[type="checkbox"][role="switch"]::before {
+[type="checkbox"][data-style="switch"]::before {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
@@ -549,8 +549,8 @@ table.striped tbody tr:nth-child(odd) { background: var(--s-surface); }
   box-shadow: 0 1px 2px rgb(0 0 0 / .25);
   transition: translate .18s ease;
 }
-[type="checkbox"][role="switch"]:checked { background: var(--s-primary); }
-[type="checkbox"][role="switch"]:checked::before { translate: .95rem 0; }
+[type="checkbox"][data-style="switch"]:checked { background: var(--s-primary); }
+[type="checkbox"][data-style="switch"]:checked::before { translate: .95rem 0; }
 
 /* range */
 :where([type="range"]) {
@@ -673,8 +673,8 @@ table.striped tbody tr:nth-child(odd) { background: var(--s-surface); }
   list-style: none;
 }
 :where(nav) :where(li) { margin: 0; }
-:where(nav) :where(a):not([role="button"]) { color: var(--s-text); text-decoration: none; }
-:where(nav) :where(a):not([role="button"]):hover,
+:where(nav) :where(a):not([data-style="button"]) { color: var(--s-text); text-decoration: none; }
+:where(nav) :where(a):not([data-style="button"]):hover,
 :where(nav) [aria-current]:not([aria-current="false"]) { color: var(--s-primary); }
 :where(nav) [aria-current]:not([aria-current="false"]) { font-weight: 600; }
 
@@ -826,7 +826,7 @@ details.dropdown.right > :is(ul, div) { left: auto; right: 0; }
 
 /* --- Tooltip: data-tooltip="..." --- */
 [data-tooltip] { position: relative; }
-[data-tooltip]:not(button, [role="button"]) { border-bottom: 1px dotted var(--s-muted); cursor: help; }
+[data-tooltip]:not(button, [data-style="button"]) { border-bottom: 1px dotted var(--s-muted); cursor: help; }
 [data-tooltip]::after {
   content: attr(data-tooltip);
   position: absolute;
@@ -866,8 +866,8 @@ details.dropdown.right > :is(ul, div) { left: auto; right: 0; }
   vertical-align: -.15em;
   animation: s-spin .7s linear infinite;
 }
-[aria-busy="true"]:not(button, [role="button"], input, select, textarea):not(:empty)::before { margin-right: .5em; }
-:is(button, [role="button"])[aria-busy="true"] { pointer-events: none; }
+[aria-busy="true"]:not(button, [data-style="button"], input, select, textarea):not(:empty)::before { margin-right: .5em; }
+:is(button, [data-style="button"])[aria-busy="true"] { pointer-events: none; }
 
 /* ==========================================================================
    9. Layout helpers
