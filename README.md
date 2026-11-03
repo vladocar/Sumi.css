@@ -119,7 +119,7 @@ Everything Sumi responds to beyond plain HTML:
 | `.small` `.large` `.full` | button | Sizes, full width |
 | `data-style="button"` | `<a>` | Link styled as a button |
 | `data-style="group"` | wrapper | Joins buttons, or an input and a button |
-| `data-style="switch"` | checkbox | Toggle switch |
+| `role="switch"` | checkbox | Toggle switch |
 | `aria-invalid="true"` / `"false"` | field | Red or green validation state |
 | `aria-busy="true"` | any element | Loading spinner |
 | `aria-current="page"` | nav link | Highlights the current page |
@@ -145,7 +145,7 @@ Everything Sumi responds to beyond plain HTML:
 </label>
 
 <!-- Switch -->
-<label><input type="checkbox" data-style="switch" checked> Email reminders</label>
+<label><input type="checkbox" role="switch" checked> Email reminders</label>
 
 <!-- Card -->
 <article>

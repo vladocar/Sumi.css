@@ -540,8 +540,8 @@ table.striped tbody tr:nth-child(odd) { background: var(--s-surface); }
 :where([type="checkbox"], [type="radio"]):disabled { opacity: .5; cursor: not-allowed; }
 :where([type="checkbox"], [type="radio"])[aria-invalid="true"] { border-color: var(--s-danger); }
 
-/* switch: <input type="checkbox" data-style="switch"> */
-[type="checkbox"][data-style="switch"] {
+/* switch: <input type="checkbox" role="switch"> */
+[type="checkbox"][role="switch"] {
   width: 2.25rem;
   height: 1.3rem;
   padding: 0 .15rem;
@@ -550,7 +550,7 @@ table.striped tbody tr:nth-child(odd) { background: var(--s-surface); }
   border-radius: 999px;
   background: var(--s-border-strong);
 }
-[type="checkbox"][data-style="switch"]::before {
+[type="checkbox"][role="switch"]::before {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
@@ -560,8 +560,8 @@ table.striped tbody tr:nth-child(odd) { background: var(--s-surface); }
   box-shadow: 0 1px 2px rgb(0 0 0 / .25);
   transition: translate .18s ease;
 }
-[type="checkbox"][data-style="switch"]:checked { background: var(--s-primary); }
-[type="checkbox"][data-style="switch"]:checked::before { translate: .95rem 0; }
+[type="checkbox"][role="switch"]:checked { background: var(--s-primary); }
+[type="checkbox"][role="switch"]:checked::before { translate: .95rem 0; }
 
 /* range */
 :where([type="range"]) {
@@ -1296,8 +1296,8 @@ dialog:modal { margin: auto !important; }
               </fieldset>
               <fieldset>
                 <legend>Notifications</legend>
-                <label><input type="checkbox" data-style="switch" checked> Email reminders</label>
-                <label><input type="checkbox" data-style="switch"> SMS</label>
+                <label><input type="checkbox" role="switch" checked> Email reminders</label>
+                <label><input type="checkbox" role="switch"> SMS</label>
               </fieldset>
             </div>
 
@@ -1338,7 +1338,7 @@ dialog:modal { margin: auto !important; }
                 <tr><td><code>&lt;dialog&gt;</code></td><td>Modal with blurred backdrop</td><td>—</td></tr>
                 <tr><td><code>&lt;nav&gt;</code></td><td>Horizontal menu, vertical inside <code>&lt;aside&gt;</code></td><td>—</td></tr>
                 <tr><td><code>&lt;progress&gt;</code></td><td>Determinate and indeterminate bars</td><td>—</td></tr>
-                <tr><td><code>&lt;input data-style="switch"&gt;</code></td><td>Toggle switch</td><td>—</td></tr>
+                <tr><td><code>&lt;input role="switch"&gt;</code></td><td>Toggle switch</td><td>—</td></tr>
               </tbody>
               <tfoot>
                 <tr><td>Total</td><td>Every common element</td><td>4 optional modifiers</td></tr>

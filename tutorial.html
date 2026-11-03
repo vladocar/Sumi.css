@@ -384,7 +384,7 @@ body > header { border-bottom: 1px solid var(--s-border); }
               <label><input type="radio" name="level" value="none" checked> I have never used a brush</label>
               <label><input type="radio" name="level" value="some"> I have tried it a few times</label>
             </fieldset>
-            <label><input type="checkbox" data-style="switch" name="news"> Send me news about new courses</label>
+            <label><input type="checkbox" role="switch" name="news"> Send me news about new courses</label>
             <br>
             <button type="submit">Book my seat</button>
           </form>
@@ -403,7 +403,7 @@ form.addEventListener('submit', (event) => {
 });</script>
         <p>Two more patterns are worth knowing:</p>
         <ul>
-          <li><code>&lt;input type="checkbox" data-style="switch"&gt;</code> draws a toggle switch instead of a checkbox.</li>
+          <li><code>&lt;input type="checkbox" role="switch"&gt;</code> draws a toggle switch instead of a checkbox.</li>
           <li><code>&lt;div data-style="group"&gt;</code> joins an input and a button into one control, like a search bar.</li>
         </ul>
         <div class="example">
@@ -747,7 +747,7 @@ blockquote {
               <tr><td><code>.small</code> <code>.large</code> <code>.full</code></td><td>button</td><td>Button sizes, full width</td></tr>
               <tr><td><code>data-style="button"</code></td><td><code>&lt;a&gt;</code></td><td>Link that looks like a button</td></tr>
               <tr><td><code>data-style="group"</code></td><td>wrapper</td><td>Joins buttons or input + button</td></tr>
-              <tr><td><code>data-style="switch"</code></td><td>checkbox</td><td>Toggle switch</td></tr>
+              <tr><td><code>role="switch"</code></td><td>checkbox</td><td>Toggle switch</td></tr>
               <tr><td><code>aria-invalid</code></td><td>field</td><td>Red when <code>true</code>, green when <code>false</code></td></tr>
               <tr><td><code>aria-busy="true"</code></td><td>any element</td><td>Loading spinner</td></tr>
               <tr><td><code>aria-current="page"</code></td><td>nav link</td><td>Highlights the current page</td></tr>
